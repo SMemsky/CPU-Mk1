@@ -54,3 +54,6 @@
 // OUT -- Write value from A to Out
 0x0f	|0|0|0|0|0|00|000|1|0010000| // Prepare ALU and B-Bus
 0x10	|0|1|0|0|0|00|000|1|0000000| // Set Out and call NOP
+// HALT -- Go to infinite loop
+0x11	|0|0|0|0|0|00|000|1|0010010| // Drop all states
+0x12	|1|0|0|0|0|00|000|0|0000000| // Simply re-execute instruction on memory
